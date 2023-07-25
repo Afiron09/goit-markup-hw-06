@@ -67,39 +67,144 @@ button {
   margin: 0;
 }
 
-/* .container {
-  width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
+.link {
+  text-decoration: none;
+}
 
 .container {
+  width: 100%;
   max-width: 428px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
+  outline: 1px solid #31d0aa;
 }
 
-.link {
-  text-decoration: none;
+/* -------------------MEDIA------------------------- */
+@media screen and (max-width: 767px) {
+  .header-list,
+  .address {
+    display: none;
+  }
+
+  .head-nav {
+    justify-content: space-between;
+  }
 }
 
-/*----------header----------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  /* --------------------TABLET--HEADER----------------------*/
+  .burger-link {
+    display: none;
+  }
+  .logo {
+    margin-right: 120px;
+  }
 
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-list {
+    display: flex;
+    gap: 40px;
+  }
+  .nav-link {
+    display: block;
+  }
+
+  .nav-link {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-accent-color);
+    padding: 24px 0;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--active-link-color);
+  }
+
+  .current {
+    position: relative;
+    color: var(--active-link-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: var(--active-link-color);
+    border-radius: 2px;
+  }
+
+  .address {
+    margin-left: auto;
+    font-style: normal;
+    margin-left: auto;
+  }
+  .head-add-list {
+    display: flex;
+    gap: 40px;
+  }
+  .addr-link {
+    display: block;
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--address-text-color);
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .addr-link:hover,
+  .addr-link:focus {
+    color: var(--active-link-color);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* --------------------PC--HEADER----------------------*/
+  .logo {
+    margin-right: 76px;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  .section-one {
+  }
+}
+/* ---------------------------------------------------- */
+
+/*----------MOBILE header----------------------------------------------------------*/
 .header {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid var(--standart-border-button);
 }
+
 .head-nav {
   display: flex;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -109,70 +214,9 @@ button {
   text-transform: uppercase;
   color: var(--logo-text-color);
   text-decoration: none;
-  margin-right: 76px;
 }
 .span-logo {
   color: var(--span-text-color);
-}
-.header-list {
-  display: flex;
-  gap: 40px;
-}
-.nav-link {
-  display: block;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-accent-color);
-  padding: 24px 0;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--active-link-color);
-}
-
-.current {
-  position: relative;
-  color: var(--active-link-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.current::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: var(--active-link-color);
-  border-radius: 2px;
-}
-
-.address {
-  font-style: normal;
-  margin-left: auto;
-}
-.head-add-list {
-  display: flex;
-  gap: 40px;
-}
-.addr-link {
-  display: block;
-  padding: 24px 0;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--address-text-color);
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.addr-link:hover,
-.addr-link:focus {
-  color: var(--active-link-color);
 }
 
 /*---------section-one-------------------------------------------------------------*/
