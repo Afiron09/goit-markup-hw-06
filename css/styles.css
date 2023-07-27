@@ -36,12 +36,24 @@ h6 {
 
 img {
   display: block;
+  /* max-width: 100%;
+  height: 100%; */
 }
 
 button {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .visually-hidden {
@@ -61,37 +73,31 @@ button {
   font-family: inherit;
 }
 
-.list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.link {
-  text-decoration: none;
-}
-
 .container {
   width: 100%;
+  min-width: 320px;
   max-width: 428px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid #31d0aa;
+  outline: 1px solid yellowgreen;
 }
 
-/* ---------------------------------------------------- */
-
-/*----------MOBILE header----------------------------------------------------------*/
+/*----------header--------------------------------------------*/
 .header {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid var(--standart-border-button);
 }
-
 .head-nav {
   display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -104,26 +110,28 @@ button {
   color: var(--logo-text-color);
   text-decoration: none;
 }
+
 .span-logo {
   color: var(--span-text-color);
 }
 
-/*---------section-one-------------------------------------------------------------*/
+/*---------section-one----------------------------------------------------*/
 
 .section-one {
   margin: 0 auto;
   background-repeat: no-repeat;
-  max-width: 1440px;
+  max-width: 428px;
   background-color: var(--primary-accent-color);
-  padding: 122px 0;
+  padding: 112px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-bg.jpg);
+    url(../images/dark-bg-mobile1x.jpg);
   background-position: center center;
   background-size: cover;
 }
+
 .title-main {
   margin-left: auto;
   margin-right: auto;
@@ -159,7 +167,7 @@ button {
   background-color: var(--active-link-color);
 }
 
-/*-------section-two---------------------------------------------------------------*/
+/*-------section-two---------*/
 
 .section-two {
   padding: 96px 0;
@@ -170,6 +178,10 @@ button {
   gap: 72px;
 }
 
+.two-list-item {
+  width: 100%;
+}
+
 .title-advantages {
   margin-bottom: 8px;
   font-weight: 700;
@@ -177,22 +189,21 @@ button {
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--primary-accent-color);
-  text-transform: capitalize;
 }
 
 .two-p {
-  width: 100%;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
 }
 
-/*-------section-three--------------------------------------------------*/
+/*-------section-three---------*/
 
 .three {
   padding-bottom: 120px;
 }
+
 .title-doing {
   margin-top: 0;
   margin-bottom: 72px;
@@ -203,6 +214,7 @@ button {
   text-transform: capitalize;
   color: var(--primary-accent-color);
 }
+
 .three-list {
   display: flex;
   gap: 24px;
@@ -212,14 +224,12 @@ button {
   width: calc((100% - 48px) / 3);
 }
 
-/*-------section-four--------------------------------------------------------*/
+/*-------section-four---------*/
 .section-four {
-  padding: 120px 0;
+  padding: 96px 0;
   background-color: var(--footer-text-color);
 }
-
 .title-team {
-  margin-top: 0;
   margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
@@ -230,12 +240,13 @@ button {
 }
 .four-list {
   display: flex;
-  gap: 24px;
+  gap: 72px;
   justify-content: center;
 }
 .four-list-item {
   background-color: var(--primary-white-color);
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+  max-width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -243,9 +254,7 @@ button {
 .div-worker {
   padding: 32px 0;
 }
-
 .title-four {
-  margin-top: 0;
   text-align: center;
   margin-bottom: 8px;
   font-weight: 500;
@@ -255,7 +264,6 @@ button {
   color: var(--primary-accent-color);
 }
 .four-p {
-  margin: 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-size: 16px;
@@ -281,24 +289,21 @@ button {
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .four-link:hover,
 .four-link:focus {
   background-color: var(--active-link-color);
 }
-
 .four-icons {
   fill: var(--footer-text-color);
 }
 
-/* ---------five------------------------------------------ */
+/* ---------five--------- */
 
 .section-five {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 96px 0;
 }
+
 .title-icons {
-  margin-top: 0;
   margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
@@ -307,15 +312,17 @@ button {
   text-transform: capitalize;
   color: var(--primary-accent-color);
 }
+
 .five-list {
   display: flex;
-  gap: 24px;
+  gap: 72px 16px;
 }
 
 .five-item {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
+
 .five-links {
   width: 100%;
   height: 100%;
@@ -339,20 +346,17 @@ button {
   fill: currentColor;
 }
 
-/*----------Footer----------------------------------------------------*/
-
+/*----------Footer-----------*/
 .footer {
   background-color: var(--primary-accent-color);
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer-cont {
   display: flex;
   align-items: baseline;
 }
-.footer-logo-p {
-  margin-right: 120px;
-}
+
 .logo-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -363,15 +367,10 @@ button {
   color: var(--logo-text-color);
 }
 
-.logo-footer.link {
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
 .span-footer {
   color: var(--footer-text-color);
 }
+
 .p-footer {
   margin-top: 0;
   margin-bottom: 0;
@@ -381,8 +380,13 @@ button {
   letter-spacing: 0.02em;
   max-width: 264px;
 }
-.footer-soc {
+
+.logo-footer.link {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 16px;
 }
+
 .footer-main-p {
   color: var(--primary-white-color);
   font-size: 16px;
@@ -392,12 +396,12 @@ button {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
+
 .footer-list-icon {
   gap: 16px;
   display: flex;
 }
-.footer-item {
-}
+
 .footer-link {
   width: 40px;
   height: 40px;
@@ -418,9 +422,7 @@ button {
   fill: var(--footer-text-color);
   display: flex;
 }
-.footer-form-container {
-  margin-left: 80px;
-}
+
 .footer-title-form {
   color: var(--primary-white-color);
   font-size: 16px;
@@ -429,15 +431,13 @@ button {
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
+/* */
 .footer-form {
   display: flex;
-  gap: 24px;
-}
-
-.footer-label {
+  gap: 16px;
 }
 .footer-input {
-  width: 264px;
+  width: 398px;
   height: 40px;
   background-color: transparent;
   border-radius: 4px;
@@ -459,7 +459,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 165px;
+  max-width: 165px;
   height: 40px;
   color: var(--primary-white-color);
   text-align: center;
@@ -472,11 +472,11 @@ button {
   background: var(--logo-text-color);
   border: none;
 }
+
 .footer-form-icon {
   margin-left: 16px;
   fill: var(--primary-white-color);
 }
-
 /*-----------PORTFOLIO-main---------*/
 
 .list-butt {
@@ -662,29 +662,22 @@ button {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 
-/* ----------------MODAL FORM ------------------------------------ */
-.backdrop {
-}
-.is-hidden {
-}
-.modal {
-}
-.modal-close-btn {
-}
-.close-icon {
-}
-.modal-p {
-}
+/* ------------------------ */
 .modal-form {
 }
 .modal-form-container {
   margin-bottom: 8px;
 }
+
+.texarea-cont {
+  margin-bottom: 16px;
+}
+
 .modal-label {
   display: block;
   color: var(--lightslate);
@@ -728,9 +721,6 @@ button {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.texarea-cont {
-  margin-bottom: 16px;
-}
 
 .modal-textarea {
   width: 100%;
@@ -751,6 +741,10 @@ button {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.check-modal {
+  margin-bottom: 24px;
+}
+
 .modal-textarea::placeholder {
   color: var(--navyblue-modal);
   font-family: Roboto;
@@ -763,48 +757,6 @@ button {
   border-radius: 4px;
 }
 
-.check-modal {
-  margin-bottom: 24px;
-}
-.modal-check {
-}
-
-.modal-check:checked + .check-text > .span-rectangle {
-  background-color: var(--active-link-color);
-  border: none;
-  fill: var(--fill-icon);
-  border-color: var(--active-link-color);
-}
-
-.modal-check:focus + .check-text > .span-rectangle {
-  border: 1px solid var(--active-link-color);
-}
-
-.check-text {
-  color: var(--lightslate);
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-}
-.span-rectangle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  margin-right: 8px;
-  border: 1px solid var(--navyblue-modal);
-  fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.check-icon {
-}
-.pryvacy-link {
-  color: var(--icon-color);
-}
 .modal-btn {
   display: block;
   color: var(--primary-white-color);
@@ -825,4 +777,48 @@ button {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.check-text {
+  color: var(--lightslate);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.pryvacy-link {
+  color: var(--icon-color);
+}
+
+.span-rectangle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  margin-right: 8px;
+  border: 1px solid var(--navyblue-modal);
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-check:checked + .check-text > .span-rectangle {
+  background-color: var(--active-link-color);
+  border: none;
+  fill: var(--fill-icon);
+  border-color: var(--active-link-color);
+}
+
+.modal-check:focus + .check-text > .span-rectangle {
+  border: 1px solid var(--active-link-color);
 }
