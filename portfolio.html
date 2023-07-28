@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -28,13 +29,10 @@
           >
           <ul class="header-list list">
             <li>
-              <a href="./index.html" class="nav-link link">Studio</a>
+              <a href="./index.html" class="nav-link link current">Studio</a>
             </li>
             <li>
-              <a
-                href="./portfolio.html"
-                target="_blank"
-                class="nav-link link current"
+              <a href="./portfolio.html" target="_blank" class="nav-link link"
                 >Portfolio</a
               >
             </li>
@@ -44,18 +42,23 @@
 
         <address class="address">
           <ul class="head-add-list list">
-            <li class="head-add-item">
+            <li>
               <a href="mailto:info@devstudio.com" class="addr-link link"
                 >info@devstudio.com</a
               >
             </li>
-            <li class="head-add-item">
+            <li>
               <a href="tel:+110001111111" class="addr-link link"
                 >+11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </address>
+        <a class="burger-link link" href="#">
+          <svg class="burger-icon" width="32" height="22">
+            <use href="./images/icons.svg#menu-burger"></use>
+          </svg>
+        </a>
       </div>
     </header>
 
@@ -79,11 +82,32 @@
             <li class="port-list-one">
               <a href="" class="main-list link">
                 <div class="container-cover">
-                  <img
-                    src="./images/img8.jpg"
-                    alt="Banking Interface"
-                    width="360"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/img8.jpg 1x, ./images/img8-2x.jpg 2x"
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tab-img8.jpg    1x,
+                        ./images/tab-img8-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile-img8.jpg    1x,
+                        ./images/mobile-img8-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                      src="./images/img8.jpg"
+                      alt="Banking Interface"
+                      width="396"
+                    />
+                  </picture>
+
                   <p class="main-cover-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
