@@ -145,7 +145,8 @@ button {
   cursor: pointer;
   fill: var(--primary-accent-color);
 }
-.burger-icon {
+
+.burger-icon-close {
   width: 8px;
   height: 8px;
 }
