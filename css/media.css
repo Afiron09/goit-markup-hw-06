@@ -1,10 +1,10 @@
 /* ----------------ДО-------------------------- */
 @media (max-width: 427px) {
-  .subscribe-input {
-    width: 94vw;
+  .footer-input {
+    max-width: 92vw;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .container {
     max-width: 768px;
   }
@@ -16,6 +16,12 @@
   }
   .header-list {
     display: none;
+  }
+  .btn-open-burger {
+    display: block;
+    padding: 24px 0;
+    border: none;
+    background-color: transparent;
   }
   .title-advantages {
     text-align: center;
@@ -155,8 +161,10 @@
   .addr-link:focus {
     color: var(--active-link-color);
   }
-
-  .burger-link {
+  .header-list {
+    display: none;
+  }
+  .btn-open-burger {
     display: none;
   }
   .section-one {
