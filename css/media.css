@@ -55,7 +55,7 @@
   .footer-cont {
     flex-wrap: wrap;
     column-gap: 24px;
-    max-width: 584px;
+    width: 584px;
   }
 }
 
@@ -345,7 +345,9 @@
   .footer {
     padding: 100px 0;
   }
-
+  .footer-cont {
+    width: 100%;
+  }
   .footer-logo-p {
     margin-right: 120px;
   }
